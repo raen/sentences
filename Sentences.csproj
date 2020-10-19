@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Update="Sentences.Core\Class1.cs">
+        <Link>Semtemces.Core\Class1.cs</Link>
+      </Compile>
+      <Compile Remove="Sentences.Core\**" />
+      <Compile Remove="Sentences.Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Sentences.Core\**" />
+      <EmbeddedResource Remove="Sentences.Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Sentences.Core\**" />
+      <None Remove="Sentences.Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Sentences.Core\**" />
+      <Content Remove="Sentences.Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Sentences.Core\bin\Debug\netcoreapp3.1\Sentences.Core.deps.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Core\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Core\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Core\obj\Semtemces.Core.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Core\obj\Sentences.Core.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Test\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Test\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Sentences.Test\obj\Sentences.Test.csproj.nuget.dgspec.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="Sentences.Core\Sentences.Core.csproj" />
+    </ItemGroup>
+
+
+</Project>
